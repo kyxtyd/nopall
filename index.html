@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animation On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: "Inter", system-ui;
+
+        }
+        .navbar {
+            padding: 15px;
+        }
+
+        .header {
+            background: url(data:image/jpeg;base64,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) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        .header p {
+            font-size: 1.5rem;
+        }
+        .header .icon{
+            font-size: 20px;
+            border: 1px solid white;
+            border-radius: 100%;
+            padding: 10px;
+            color: white;
+            margin: 2px;
+        }
+        .about, .projects, .skills, .contact {
+            padding: 50px 0;
+        }
+        .skills .progress {
+            height: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        @media (max-width: 558px) {
+            .about {
+                text-align: center;
+            }
+
+            .about img{
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div>
+            <h1 data-aos="fade-up" data-aos-duration="1000">Hi, I'm Noval rizky </h1>
+            <p id="typed-text" data-aos="fade-up" data-aos-duration="2000"></p>
+            <!-- <a href="#about" class="btn btn-primary mt-4" data-aos="fade-up" data-aos-duration="2500">Contact Me</a> -->
+            <!-- <a href="#about" class="btn btn-outline-light mt-4" data-aos="fade-up" data-aos-duration="3000">See my work</a> -->
+            <a href=""><i class="fa-brands fa-github icon" data-aos="fade-up" data-aos-duration="2200"></i></a>
+            <a href="https://www.instagram.com/kyxtyd?igsh=Y3RwNjVvMjZ3NTI2"><i class="fa-brands fa-instagram icon" data-aos="fade-up" data-aos-duration="2400"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp icon" data-aos="fade-up" data-aos-duration="2600"></i></a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="nopal.jpg" class="img-fluid rounded-circle" alt="About Me" width="300px" data-aos="fade-up" data-aos-duration="1000">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="mb-3" data-aos="fade-up" data-aos-duration="1500">About Me</h2>
+                    <p data-aos="fade-up" data-aos-duration="2000">saya adalah seorang anak yang rajin berlatih keras untuk mengejar cita-cita yang selama ini saya impikan dan saya harus membanggakan kedua orang tua saya harapan terakhir orangtua dan saya harus membuktikannya</p>
+                    <p data-aos="fade-up" data-aos-duration="2500">saya selalu di support oleh kedua orang tua saya dan kakak saya, maka dari itu saya ingin membanggakan mereka lewat prestasi yang saya milikis</p>
+                    <a href="#projects" class="btn btn-outline-primary" data-aos="fade-up" data-aos-duration="1000">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects bg-light">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">My hoby</h2>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card mb-4" data-aos="fade-up" data-aos-duration="1100">
+                        <img src="emil.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoby 1</h5>
+                            <p class="card-text">Sepak bola</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4" data-aos="fade-up" data-aos-duration="1200">
+                        <img src="albagir.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoby 2</h5>
+                            <p class="card-text">Futsal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4" data-aos="fade-up" data-aos-duration="1300">
+                        <img src="olahraga.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoby 3</h5>
+                            <p class="card-text">BERLARI</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4" data-aos="fade-up" data-aos-duration="1400">
+                        <img src="mancing.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoby 4</h5>
+                            <p class="card-text">Memancing penenang dikala banyak masalah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4" data-aos="fade-up" data-aos-duration="1500">
+                        <img src="bercanda tawa.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Hoby 5</h5>
+                            <p class="card-text">Bercanda dengan teman memanglah asik</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#" data-aos="fade-up" data-aos-duration="1600">
+                        See all my projects
+                      </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">my kegiatan</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1100">
+                    <h5>FUTSAL</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1200">
+                    <h5>BERCANDA TAWA</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1300">
+                    <h5>SEPAKBOLA</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%">70%</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1400">
+                    <h5>BELAJAR</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact bg-light">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">Contact Me</h2>
+            <form class="mt-4">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="col-12" data-aos="fade-up" data-aos-duration="1300">
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center" data-aos="fade-up" data-aos-duration="1300">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Noval rizky. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const text = "Web Developer | Designer | Freelancer";
+        let index = 0;
+        const speed = 150; // speed in milliseconds
+        const delayBetweenLoops = 3000; // delay before restarting the typing effect
+
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typed-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, speed);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("typed-text").textContent = ""; // clear text
+                    index = 0; // reset index
+                    setTimeout(typeEffect, speed); // restart typing effect
+                }, delayBetweenLoops);
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+</body>
+</html>
